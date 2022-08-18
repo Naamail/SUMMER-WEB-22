@@ -1,0 +1,14 @@
+* {
+    margin: 5px;
+    padding: 5px;
+    color: blue;
+}
+li{
+    display: inline;
+    color: blue;
+    background-color: aqua;
+}
+
+#secondaryHeader {
+    color: red;
+}
