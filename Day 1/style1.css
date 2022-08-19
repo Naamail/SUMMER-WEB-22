@@ -1,0 +1,31 @@
+* {
+    margin: 5px;
+    padding: 5px;
+    color: blue;
+}
+li{
+    display: inline;
+    color: blue;
+    background-color: aqua;
+}
+
+#secondaryHeader {
+    color: red;
+}
+
+body {
+    background-color: rgb(196, 204, 212);
+}
+
+.A1 { color: darkblue;
+
+}
+
+a {
+    font-size: 20px;
+    background-color: white;
+}
+
+li a {
+   background-color: yellow; 
+}
