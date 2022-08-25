@@ -2,11 +2,26 @@
     color: blue;
 }
 
-#GoButton {
-    background-color: rgb(193, 192, 192);
+label.First2 , input {
+    color: red;
+    background-color: aqua;
 }
 
-label {
-    color: red;
+form h1 {
+    color: green;
+}
 
+a:link {
+    background-color: red;
+}
+ a:visited {
+    background-color: green;
+}
+
+a:hover {
+    background-color: orange;
+}
+
+input[name] {
+    background-color: yellow;
 }
