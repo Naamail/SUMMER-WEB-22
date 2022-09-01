@@ -1,0 +1,52 @@
+* {
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.GridContainer {
+    display: grid;
+    background-color: gray;
+    grid-template-areas: 'Gheader Gheader'
+    'Gleft Gright'
+    ;
+}
+
+.GridHeader {
+    grid-area: Gheader;
+    background-color: white;
+    font-size: 20px;
+    animation-name: SizeUp;    
+    animation: SizeUp 2s 2s infinite ease-in-out;
+}
+
+.GridLeft {
+    grid-area: Gleft;
+    background-color: lightgray;
+}
+
+.GridRight {
+    grid-area: Gright;
+    background-color: lightskyblue;
+}
+
+@media screen and (max-width: 600px){
+    .GridContainer {
+        display: grid;
+        background-color: darkblue;
+        grid-template-areas: 
+        'Gheader'
+        'Gleft' 
+        'Gright';
+    }
+};
+
+@keyframes SizeUp {
+    0% {font-size: 20px;}
+    50% {font-size: 30px;}
+    100% {font-size: 20px;}
+    
+}
+
+
+    

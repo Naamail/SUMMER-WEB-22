@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin: 1px;
+    font-size: 20px;
+
+}
+#container {
+    display: grid;
+    grid-template-areas: 
+    'header header header header header'
+    'menu main main right right'
+    'menu footer footer footer footer';
+}
+
+#item1 {
+    grid-area: header;
+    background-color: aqua;
+    height: 25vh;
+    animation-name: aquaBlink;
+    animation-duration: 2s;
+    animation-iteration-count: 4;
+    animation-timing-function: ease-in-out;
+}
+
+#item2 {
+    grid-area: menu;
+    background-color: blue;
+    height: 50vh;
+}
+
+#item3 {
+    grid-area: main;
+    background-color: gold;
+    height: 25vh;
+}
+#item4 {
+    grid-area: right;
+    background-color: lightcoral;
+    height: 25vh;
+}
+
+#item5 {
+    grid-area: footer;
+    background-color: darkcyan;
+    height: 25vh;
+
+}
+
+
+@media screen and (max-width: 600px) {
+    #container {
+        display: grid;
+        grid-template-areas: 
+        'header'
+        'menu' 
+        'main'
+        'right'
+        'footer';
+    }    
+ }
+
+ @keyframes aquaBlink {
+    0% {background-color: aqua;}
+    30% {background-color: white;}
+    70% {background-color: yellow;}
+    100% {background-color: aqua;}
+    
+ }
+
+ #HeaderDiv {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+ }
+
+ #HeaderDiv:hover {
+    transition: width 2s;
+ }

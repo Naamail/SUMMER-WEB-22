@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");  
+
+:root {
+    --Myred:#ff0022;
+    --Mylighblue:#edfdfb;
+    --Mygrey:#b9bab8;
+    --Mypink:#f8e9f2;
+    --Myblack: #04030f
+}
+
+@font-face {
+    font-family: MyFontBold;
+    src: url(Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Silk;
+    src: url(Silkscreen-Regular.ttf);
+}
+
+* {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid var(--Myblack);
+}
+
+body {
+    background-image: url("piza.jfif");
+    font-family: Silk;
+    /*background-repeat: no-repeat;
+    background-position: center;
+    */
+}
+
+form{
+    background-color: var(--Mypink);
+    height: 50vh;
+    width: 50vw;
+    align-self: center;
+}
+
+label {
+    font-family: "Ubuntu";
+}
+/*
+label.First2 , input {
+    color: red;
+    background-color: aqua;
+}
+
+form h1 {
+    color: green;
+}
+*/
+a:link {
+    background-color: var(--Myred);
+}
+ a:visited {
+    background-color: var(--Mylighblue);
+}
+
+a:hover {
+    background-color: var(--Mypink);
+}
+
+
+/*
+input[name] {
+    background-color: yellow;
+}
+*/
