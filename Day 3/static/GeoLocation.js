@@ -12,5 +12,5 @@ function showPosition(position) {
     var x = document.getElementById('p');
     var y = document.getElementById("BTN");
     x.innerHTML = "Latitude: " + position.coords.latitude 
-    + "longtitide: " + position.coords.longitude;
+    + "longtitide: " + position.coords. longitude;
 }
