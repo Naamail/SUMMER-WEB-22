@@ -8,6 +8,6 @@ var port = 8080;
 http.createServer(function(req, res) {
     res.write('Hi for the third time');
     console.log(q.protocol);
-    console.log(q.host)
+    console.log(q.host);
     res.end();    
 }).listen(port);
