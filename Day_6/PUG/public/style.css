@@ -1,0 +1,25 @@
+* {
+    padding: 5vh;  
+}
+
+a {
+    display: inline;
+    color: black; 
+    text-align: center; 
+    font-size: 12vh;
+    
+}
+
+nav {
+    text-align: center;
+    
+}
+
+header {
+    height: 20vh;
+    background-image: url('pug-logo-png-transparent.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
+    
+}
+
