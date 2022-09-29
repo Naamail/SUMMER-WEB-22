@@ -12,8 +12,7 @@ app.use(BodyParser.urlencoded({extended: true}));
 
 app.get('/',(req, res)=>{
     res.sendFile(path.join(__dirname,"page1.html"));
-    //res.json({message:'good morning day 6'});
-});
+1});
 
 app.get('/update', (req,res)=>{
     res.sendFile(path.join(__dirname, "page3.html"));

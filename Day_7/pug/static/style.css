@@ -1,0 +1,12 @@
+* {
+    padding: 1%;
+    margin: 1%;
+    border: 1px solid rgb(205, 204, 204);
+}
+
+nav {
+    background-image: url('pug.svg');
+    background-size:4% ;
+}
+    
+
