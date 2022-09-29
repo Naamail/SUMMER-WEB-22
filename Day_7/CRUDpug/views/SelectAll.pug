@@ -1,0 +1,6 @@
+extends layout 
+block content 
+    h1 select all students 
+    form(action="/ShowAllStudents", method="get") 
+        label(for="") click SELECT to get all students
+        input(type="submit", value="SELECT") 
