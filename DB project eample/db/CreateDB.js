@@ -1,4 +1,8 @@
-var SQL = require('./db')
+var SQL = require('./db');
+const path = require('path');
+const csv=require('csvtojson');
+
+
 
 const CreateTable = (req,res)=> {
     var Q1 = "CREATE TABLE users (name VARCHAR(255), email VARCHAR(255))";
@@ -15,22 +19,34 @@ const CreateTable = (req,res)=> {
 }
 
 const InsertData = (req,res)=>{
-    var NewUser = {
-        "name" : "david",
-        "email" : "david@gmail.com"
-    }
     var Q2 = "INSERT INTO users SET ?";
-    SQL.query(Q2, NewUser, (err, mySQLres)=>{
-        if (err) {
-            res.status(400).send({message: "error om creating user" + err});
-            console.log("error om creating user" + err);
-            return;            
+    const csvFilePath= path.join(__dirname, "data.csv");
+    csv()
+    .fromFile(csvFilePath)
+    .then((jsonObj)=>{
+    console.log(jsonObj);
+    jsonObj.forEach(element => {
+        var NewEntry = {
+            "name": element.name,
+            "email": element.email
         }
-        console.log("created new user succesfully "+ mySQLres);
-        res.send("user inserted");
-        return;
+        SQL.query(Q2, NewEntry, (err,mysqlres)=>{
+            if (err) {
+                console.log("error in inserting data", err);
+            }
+            console.log("created row sucssefuly ");
+        });
     });
+    })
+    res.send("data read");
 };
+ 
+ 
+    
+
+
+
+
 
 
 const ShowTable = (req,res)=>{
